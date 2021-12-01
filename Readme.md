@@ -3,43 +3,90 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1081)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Grid View for ASP.NET Web Forms - How to display the Grid View in the full screen mode
 
-* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-<!-- default file list end -->
-# How to use grid (with vertical scrollbar) in Full Screen mode (100% Width and Height)
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/100/)**
-<!-- run online end -->
+This example demonstrates how to set the size of the [Grid View](https://docs.devexpress.com/AspNet/5823/components/grid-view) control to the size of the browser window.
 
+## Overview
 
-<p>This example demonstrates how to resize the ASPxGridView control based on the browser window size.<br><br><strong>Update:</strong><br>To keep the visual grid's size intact while adjusting it on the first load, wrap ASPxGridView with a hidden container and show it only after its full initialization and adjustment. For example:</p>
+Follow the steps below to display the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the full screen mode.
 
+### Step 1 - Remove Margins
+
+Set the `body` element's paddings and margins equal to zero.
+
+```css  
+body, html  
+{  
+    padding: 0;  
+    margin: 0;  
+}  
+``` 
+
+### Step 2 - Add a Vertical Scroll Bar
+
+Set the [VerticalScrollBarMode](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridSettings.VerticalScrollBarMode) property to `Visible` to show the vertical scrollbar.
 
 ```aspx
+<dx:ASPxGridView runat="server" ID="gridView" ClientInstanceName="grid" Width="100%" DataSourceID="ds" KeyFieldName="OrderID">
+    <SettingsPager PageSize="50" />
+    <Settings VerticalScrollBarMode="Visible" VerticalScrollableHeight="0" />
+</dx:ASPxGridView>
+```
+
+### Step 3 - Set the Control's Height
+
+Handle the [Init](https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.control.init?view=netframework-4.8) and [EndCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.EndCallback) events and call the [SetHeight](https://docs.devexpress.com/AspNet/js-ASPxClientControl.SetHeight(height)) method to change the Grid View's height on the server and on the client.
+
+```aspx
+function OnInit(s, e) {
+    AdjustSize();
+}
+function OnEndCallback(s, e) {
+    AdjustSize();
+}
+function AdjustSize() {
+    var height = Math.max(0, document.documentElement.clientHeight);
+    grid.SetHeight(height);
+}
+
+<dx:ASPxGridView runat="server" ID="gridView" ClientInstanceName="grid" Width="100%" DataSourceID="ds" KeyFieldName="OrderID">
+    <!-- ... --->
+    <ClientSideEvents Init="OnInit" EndCallback="OnEndCallback" />
+</dx:ASPxGridView>
+```
+
+### Step 4 - Hide the Resizing from Users
+
+Place the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) to a hidden container and show the container when the initialization is complete.
+
+```aspx
+function OnInit(s, e) {
+    // ...
+    document.getElementById("gridContainer").style.visibility = "";
+}
+
 <div id="gridContainer" style="visibility: hidden">
-    <dx:ASPxGridView runat="server" ID="gridView" ...>
-        ...
+    <dx:ASPxGridView runat="server" ID="gridView" ClientInstanceName="grid" Width="100%" DataSourceID="ds" KeyFieldName="OrderID">
+        <!-- ... --->
     </dx:ASPxGridView>
 </div>
 ```
 
+<!-- default file list -->
 
+## Files to Look At
 
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 
-```js
-function OnInit(s, e) {
-    AdjustSize();
-    document.getElementById("gridContainer").style.visibility = "";
-}
+<!-- default file list end -->
 
-```
+## Documentation
 
+- [Grid View Examples](https://docs.devexpress.com/AspNet/3768/components/grid-view/examples)
 
-<p><strong><br>MVC Version:<br></strong><a href="https://www.devexpress.com/Support/Center/p/E3958">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><strong><br><br>See Also:<br></strong><a href="https://www.devexpress.com/Support/Center/p/E3958">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><a href="https://www.devexpress.com/Support/Center/p/E3940">How to use the ASPxPageControl control in a Full Screen mode (100% browser Width and Height)</a><br></p>
+## More Examples
 
-<br/>
-
-
+- [Grid View for ASP.NET MVC - How to display the Grid View in the full screen mode](https://supportcenter.devexpress.com/ticket/details/t830635/how-to-use-the-gridview-extension-in-full-screen-mode-100-browser-width-and-height)
+- [Page Control for ASP.NET Web Forms - How to display the Page Control in the full screen mode](https://supportcenter.devexpress.com/ticket/details/t830634/how-to-use-the-aspxpagecontrol-control-in-full-screen-mode-100-browser-width-and-height)
