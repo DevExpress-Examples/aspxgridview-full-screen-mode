@@ -58,7 +58,7 @@ function AdjustSize() {
 
 ### 4. Hide the Resizing from Users
 
-Place the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) in a hidden container and show the container after the initialization is complete.
+Place the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) in a hidden container and show the container after initialization is completed.
 
 ```aspx
 function OnInit(s, e) {
