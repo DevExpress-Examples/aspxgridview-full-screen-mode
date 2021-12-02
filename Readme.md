@@ -11,7 +11,7 @@ This example demonstrates how to set the size of the [Grid View](https://docs.de
 
 Follow the steps below to display the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) control in the full screen mode.
 
-### Step 1 - Remove Margins
+### 1. Remove Margins
 
 Set the `body` element's paddings and margins equal to zero.
 
@@ -23,7 +23,7 @@ body, html
 }  
 ``` 
 
-### Step 2 - Add a Vertical Scroll Bar
+### 2. Add a Vertical Scroll Bar
 
 Set the [VerticalScrollBarMode](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridSettings.VerticalScrollBarMode) property to `Visible` to show the vertical scrollbar.
 
@@ -34,9 +34,9 @@ Set the [VerticalScrollBarMode](https://docs.devexpress.com/AspNet/DevExpress.We
 </dx:ASPxGridView>
 ```
 
-### Step 3 - Set the Control's Height
+### 3. Set the Control's Height
 
-Handle the [Init](https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.control.init?view=netframework-4.8) and [EndCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.EndCallback) events and call the [SetHeight](https://docs.devexpress.com/AspNet/js-ASPxClientControl.SetHeight(height)) method to change the Grid View's height on the server and on the client.
+Handle the [Init](https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.control.init?view=netframework-4.8) and [EndCallback](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.EndCallback) events and call the [SetHeight](https://docs.devexpress.com/AspNet/js-ASPxClientControl.SetHeight(height)) method to adjust the Grid View's height during initialization and after each [callback](https://docs.devexpress.com/AspNet/402559/common-concepts/callbacks).
 
 ```aspx
 function OnInit(s, e) {
@@ -56,7 +56,7 @@ function AdjustSize() {
 </dx:ASPxGridView>
 ```
 
-### Step 4 - Hide the Resizing from Users
+### 4. Hide the Resizing from Users
 
 Place the [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) to a hidden container and show the container when the initialization is complete.
 
