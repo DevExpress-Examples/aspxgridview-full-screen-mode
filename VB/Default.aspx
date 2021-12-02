@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeFile="Default.aspx.vb" Inherits="_Default" %>
 
-<%@ Register Assembly="DevExpress.Web.v16.1, Version=16.1.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 
@@ -39,7 +39,7 @@
             <dx:ASPxGridView runat="server" ID="gridView" ClientInstanceName="grid" AutoGenerateColumns="true"
                 Width="100%" DataSourceID="ds" KeyFieldName="OrderID" OnHtmlRowCreated="gridView_HtmlRowCreated">
                 <SettingsPager PageSize="50" />
-                <Settings ShowVerticalScrollBar="true" VerticalScrollableHeight="0" />
+                <Settings VerticalScrollBarMode="Visible" VerticalScrollableHeight="0" />
                 <ClientSideEvents Init="OnInit" EndCallback="OnEndCallback" />
             </dx:ASPxGridView>
         </div>

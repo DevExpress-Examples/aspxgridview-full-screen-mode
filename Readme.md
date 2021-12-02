@@ -16,8 +16,7 @@ Follow the steps below to display the [ASPxGridView](https://docs.devexpress.com
 Set the `body` element's paddings and margins to zero.
 
 ```css  
-body, html  
-{  
+body, html  {
     padding: 0;  
     margin: 0;  
 }  
