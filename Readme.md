@@ -37,7 +37,7 @@ function OnInit(s, e) {
 ```
 
 
-<p><strong><br>MVC Version:<br></strong><a href="https://www.devexpress.com/Support/Center/p/E3958">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><strong><br><br>See Also:<br></strong><a href="https://www.devexpress.com/Support/Center/p/E3958">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><a href="https://www.devexpress.com/Support/Center/p/E3940">How to use the ASPxPageControl control in a Full Screen mode (100% browser Width and Height)</a><br></p>
+<p><strong><br>MVC Version:<br></strong><a href="https://supportcenter.devexpress.com/ticket/details/t830635/how-to-use-the-gridview-extension-in-full-screen-mode-100-browser-width-and-height">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><strong><br><br>See Also:<br></strong><a href="https://supportcenter.devexpress.com/ticket/details/t830635/how-to-use-the-gridview-extension-in-full-screen-mode-100-browser-width-and-height">How to use the GridView extension in a Full Screen mode (100% browser Width and Height)</a><a href="https://supportcenter.devexpress.com/ticket/details/t830634/how-to-use-the-aspxpagecontrol-control-in-full-screen-mode-100-browser-width-and-height">How to use the ASPxPageControl control in a Full Screen mode (100% browser Width and Height)</a><br></p>
 
 
 <h3>Description</h3>
