@@ -9,9 +9,6 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # How to use grid (with vertical scrollbar) in Full Screen mode (100% Width and Height)
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128543594/)**
-<!-- run online end -->
 
 
 <p>This example demonstrates how to resize the ASPxGridView control based on the browser window size.<br><br><strong>Update:</strong><br>To keep the visual grid's size intact while adjusting it on the first load, wrap ASPxGridView with a hidden container and show it only after its full initialization and adjustment. For example:</p>
