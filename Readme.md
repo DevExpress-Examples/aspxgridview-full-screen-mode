@@ -93,7 +93,7 @@ function OnInit(s, e) {
 - [Grid View for ASP.NET MVC - How to display the Grid View in the full screen mode](https://supportcenter.devexpress.com/ticket/details/t830635/how-to-use-the-gridview-extension-in-full-screen-mode-100-browser-width-and-height)
 - [Page Control for ASP.NET Web Forms - How to display the Page Control in the full screen mode](https://supportcenter.devexpress.com/ticket/details/t830634/how-to-use-the-aspxpagecontrol-control-in-full-screen-mode-100-browser-width-and-height)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=aspxgridview-full-screen-mode&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=aspxgridview-full-screen-mode&~~~was_helpful=no)
 
